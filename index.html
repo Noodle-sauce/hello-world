@@ -1,21 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Hello World!</title>
-<link rel="stylesheet" href="bluestyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Quality Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #f0f0f0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+            background-color: #f0f0f0;
+        }
+
+        .light-switch-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .light-switch {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background-color: #ddd;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .light-switch:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + .light-switch:before {
+            transform: translateX(50px);
+        }
+
+        /* Interactive Light Switch Animation */
+        input[type="checkbox"] + .light-switch:active:before {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Light and Dark Themes */
+        .dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Toggle Theme Button Styles */
+        .toggle-button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff9900, #ff5f6d);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background: linear-gradient(135deg, #ff5f6d, #ff9900);
+        }
+    </style>
+    <script>
+        // Function to toggle the dark theme
+        function toggleTheme() {
+            const body = document.querySelector("body");
+            body.classList.toggle("dark-theme");
+        }
+    </script>
 </head>
+
 <body>
-
-<h1>Hello world!</h1>
-<<<<<<< HEAD
-<p>This is the first file in my new Git Repo.</p>
-<p>This line is here to show how merging works.</p>
-=======
-<div><img src="img_hello_world.jpg" alt="Hello World from Space" style="width:100%;max-width:960px"></div>
-<p>This is the first file in my new Git Repo.</p>
-<p>A new line in our file!</p>
-<div><img src="img_hello_git.jpg" alt="Hello Git" style="width:100%;max-width:640px"></div>
->>>>>>> hello-world-images
-
+    <header>
+        <h1>High-Quality Website</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="light-switch-container">
+            <label class="light-switch" for="toggle-light">
+                <input type="checkbox" id="toggle-light">
+            </label>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 High-Quality Website. All rights reserved.</p>
+        <button class="toggle-button" onclick="toggleTheme()">Toggle Theme</button>
+    </footer>
 </body>
+
 </html>
